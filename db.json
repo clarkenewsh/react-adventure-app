@@ -1,0 +1,44 @@
+{
+  "adventures": [
+    {
+      "id": 1,
+      "title": "Euro Trip",
+      "description": "Adventure description",
+      "location": "Europe",
+      "date": "September 2022",
+      "img": "image here" 
+    },
+    {
+      "id": 2,
+      "title": "Ljubljana",
+      "description": "Adventure description",
+      "location": "Slovenia",
+      "date": "Summer 2022",
+      "img": "image here" 
+    },
+    {
+      "id": 3,
+      "title": "Skye",
+      "description": "Adventure description",
+      "location": "Scotland",
+      "date": "Summer 2022",
+      "img": "image here" 
+    },
+    {
+      "id": 4,
+      "title": "Adventure Title",
+      "description": "Adventure description",
+      "location": "UK",
+      "date": "Summer 2022",
+      "img": "image here" 
+    },
+    {
+      "id": 5,
+      "title": "Adventure Title",
+      "description": "Adventure description",
+      "location": "UK",
+      "date": "Summer 2022",
+      "img": "image here" 
+    }
+  ]
+}
