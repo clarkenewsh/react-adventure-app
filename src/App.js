@@ -1,22 +1,23 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AdventureList from './components/AdventureList';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import NewAdventures from './pages/NewAdventures';
+import Adventure from './components/Adventure';
 
 // Tasks
 // 1 - App grid css layout - reusable CSS Grid for page, flex for components
 // 2 - Page components with css for each
-// 3 - UI Componenets with css for each
-// 4 - Styled Componenets
-// 5 - React routes
-// 6 - CRUD operations
-// 7 - Forms
-// 8 - Conditional rendering - favourites, categorys etc
-
+// 3 - UI Components with css for each
+// 4 - JSON Server to store data using fetchapi & use affect to GET, POST & DELETE
+// 4 - Styled Components??
+// 5 - React routes & router setup - Navlinks 
+// 6 - CRUD operations on adventures
+// 7 - Form to create adventures
+// 8 - Conditional rendering - favorites, catagories etc
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
       fetch('http://localhost:8000/adventures')
         .then(res => {
           if(!res.ok) {
-            // Throw error is server responce is not ok
+            // Throw error is server response is not ok
             throw Error('Could not load data from the resource');
           }
           return res.json(); 
@@ -57,28 +58,23 @@ function App() {
 
 
   return (
-    <Router>
       <div className="App">
         <header>
           <Navbar />
         </header>
         <main className="main-content wrapper">
-            <Route path="/">
-            <Home />
-              { isError && <div> { isError }</div>}
-              { isLoading && <div>Loading...</div>}
-              { adventures && <AdventureList adventures={adventures} title='Upcoming Adventures'/>} 
-            </Route>
-            <Route path='/new-adventure'>
+        {/* <Routes> */}
+            {/* <Route exact path="/" element={<Home />}/> */}
+            <Home isLoading={ isLoading } isError={ isError }adventures={adventures}/>
+            {/* <Route path='/new-adventure'> */}
               <NewAdventures />
-            </Route>
-            <Route path='/favorites'>
-              <Favorites />
-            </Route>
+            {/* </Route>
+            {/* <Route path='/favorites'> */}
+              {/* <Favorites adventures={adventures} title="Favorite Adventures" /> */}
+            {/* </Route> */}
+          {/* </Routes> */}
         </main>
       </div>
-    </Router>
-
   );
 }
 

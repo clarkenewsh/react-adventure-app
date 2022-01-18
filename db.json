@@ -6,6 +6,9 @@
       "description": "Adventure description",
       "location": "Europe",
       "date": "September 2022",
+      "category": "Road trip",
+      "author": "Clarke",
+      "favorite": false,
       "img": "image here" 
     },
     {
@@ -14,6 +17,9 @@
       "description": "Adventure description",
       "location": "Slovenia",
       "date": "Summer 2022",
+      "category": "Road trip",
+      "author": "Clarke",
+      "favorite": false,
       "img": "image here" 
     },
     {
@@ -22,6 +28,9 @@
       "description": "Adventure description",
       "location": "Scotland",
       "date": "Summer 2022",
+      "category": "Road trip",
+      "author": "Clarke",
+      "favorite": false,
       "img": "image here" 
     },
     {
@@ -30,6 +39,9 @@
       "description": "Adventure description",
       "location": "UK",
       "date": "Summer 2022",
+      "category": "Road trip",
+      "author": "Clarke",
+      "favorite": false,
       "img": "image here" 
     },
     {
@@ -38,7 +50,10 @@
       "description": "Adventure description",
       "location": "UK",
       "date": "Summer 2022",
-      "img": "image here" 
+      "category": "Road trip",
+      "author": "Clarke",
+      "favorite": false,
+      "img": "../public/europe.jpeg" 
     }
   ]
 }

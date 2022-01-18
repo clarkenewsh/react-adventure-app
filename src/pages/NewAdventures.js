@@ -1,4 +1,5 @@
 import React from 'react'
+import Create from '../components/Create'
 
 const NewAdventures = () => {
     return (
