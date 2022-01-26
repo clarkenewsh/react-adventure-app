@@ -9,7 +9,7 @@
       "category": "Road trip",
       "author": "Clarke",
       "favorite": true,
-      "img": "image here" 
+      "img": "https://www.worldatlas.com/r/w1200/upload/f3/53/df/europe-map.png" 
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "category": "Road trip",
       "author": "Clarke",
       "favorite": true,
-      "img": "image here" 
+      "img": "https://lp-cms-production.imgix.net/2019-06/GettyImages-494314513_high.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800" 
     },
     {
       "id": 3,
@@ -30,8 +30,8 @@
       "date": "Summer 2022",
       "category": "Road trip",
       "author": "Clarke",
-      "favorite": true,
-      "img": "image here" 
+      "favorite": false,
+      "img": "https://media.timeout.com/images/105590957/image.jpg" 
     },
     {
       "id": 4,
@@ -53,7 +53,7 @@
       "category": "Road trip",
       "author": "Clarke",
       "favorite": false,
-      "img": "../public/europe.jpeg" 
+      "img": "" 
     }
   ]
 }

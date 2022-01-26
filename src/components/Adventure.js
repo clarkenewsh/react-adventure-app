@@ -11,8 +11,8 @@ const Adventure = (props) => {
 
     return (
         <div className="adventure-details">
+            <img src={adventure.img} />
             <h3>&#128205;{ adventure.title }</h3>
-
             <p>&#127758;: { adventure.location }</p>
             {/* Toggle read more button - inline function to show opsite of what read more is set to*/}
             <button onClick={() => setReadMore(!readMore)}>See itinerary</button>
@@ -20,7 +20,7 @@ const Adventure = (props) => {
             {readMore && <p>{ adventure.description }</p>}
             <p>&#128197;: { adventure.date }</p>
             <p>Creator: {adventure.author}</p>
-            {/* <img>{adventure.img}</img> */}
+            
            <BsStar />
         </div>
     )

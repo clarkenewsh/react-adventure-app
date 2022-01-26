@@ -48,7 +48,7 @@ const Home = () => {
             { isLoading && <div>Loading...</div>}
             { adventures && <AdventureList adventures={adventures} title='All Adventures'/>} 
             {/* Testing favourites logic to filter adventures with logic set to true */}
-            {adventures && <AdventureList adventures={adventures.filter((adventure) => adventure.favorite === true)} title="Favorite Trips"/>} 
+            {adventures && <AdventureList adventures={adventures.filter((adventure) => adventure.favorite === true)} title="My Favorite Adventures"/>} 
             
         </section>
     )
