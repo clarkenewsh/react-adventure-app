@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -6,9 +7,9 @@ const Navbar = () => {
                 <h1>Adventure Planner App</h1>
             </div>
             <div className="nav-links">
-                <a href="/">Adventures</a>
-                <a href="/favorites">Favorites</a>
-                <a href="/create">Create Adventure</a>
+                <Link to='/'>Adventures</Link>
+                <Link to='/favorites'>My Favorites</Link>
+                <Link to='/create-adventure'>Create Adventure</Link>
             </div>
         </nav>
     )
