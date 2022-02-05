@@ -1,4 +1,5 @@
 import Adventure from "./Adventure";
+import cssClass from './AdventureList.module.css';
 
 const AdventureList = (props) => {
 
@@ -9,7 +10,7 @@ const AdventureList = (props) => {
     return (
         <section>
             <h1>{ title }</h1>
-            <div className="adventure-list">
+            <div className={cssClass.adventureList}>
                 {adventures.map((adventure) => (
                     <Adventure className="adventure-item" key={adventure.id} adventure={adventure} />
                 ))}

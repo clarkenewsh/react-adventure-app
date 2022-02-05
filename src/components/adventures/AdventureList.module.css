@@ -1,0 +1,12 @@
+/* Adventure List component  */
+
+.adventureList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media all and (max-width: 500px) {
+
+  }
+  

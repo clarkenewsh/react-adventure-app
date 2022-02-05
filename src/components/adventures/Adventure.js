@@ -1,17 +1,16 @@
 import { BsStar } from "react-icons/bs";
 import { useState } from "react";
+import cssClass from './Adventure.module.css';
 
-const Adventure = (props) => {
+const Adventure = ({ adventure }) => {
 
-    // Catch props data and handleDelete function
-    const adventure = props.adventure;
 
     // Set state to toggle adventure description
     const [readMore, setReadMore] = useState(false);
 
     return (
-        <div className="adventure-details">
-            <img src={adventure.img} />
+        <div className={cssClass.adventureDetails}>
+            <img src={ adventure.img } alt={adventure.title}/>
             <h3>&#128205;{ adventure.title }</h3>
             <p>&#127758;: { adventure.location }</p>
             {/* Toggle read more button - inline function to show opsite of what read more is set to*/}
