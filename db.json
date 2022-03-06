@@ -7,9 +7,9 @@
       "location": "Europe",
       "date": "September 2022",
       "category": "Road trip",
-      "author": "Clarke",
+      "creator": "Clarke",
       "favorite": true,
-      "img": "https://www.worldatlas.com/r/w1200/upload/f3/53/df/europe-map.png" 
+      "img": "https://www.worldatlas.com/r/w1200/upload/f3/53/df/europe-map.png"
     },
     {
       "id": 2,
@@ -18,9 +18,9 @@
       "location": "Slovenia",
       "date": "Summer 2022",
       "category": "Road trip",
-      "author": "Clarke",
+      "creator": "Clarke",
       "favorite": true,
-      "img": "https://lp-cms-production.imgix.net/2019-06/GettyImages-494314513_high.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800" 
+      "img": "https://lp-cms-production.imgix.net/2019-06/GettyImages-494314513_high.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
     },
     {
       "id": 3,
@@ -29,31 +29,17 @@
       "location": "Scotland",
       "date": "Summer 2022",
       "category": "Road trip",
-      "author": "Clarke",
+      "creator": "Clarke",
       "favorite": false,
-      "img": "https://media.timeout.com/images/105590957/image.jpg" 
+      "img": "https://media.timeout.com/images/105590957/image.jpg"
     },
     {
-      "id": 4,
-      "title": "Adventure Title",
-      "description": "Adventure description",
-      "location": "UK",
-      "date": "Summer 2022",
-      "category": "Road trip",
-      "author": "Clarke",
-      "favorite": false,
-      "img": "image here" 
-    },
-    {
-      "id": 5,
-      "title": "Adventure Title",
-      "description": "Adventure description",
-      "location": "UK",
-      "date": "Summer 2022",
-      "category": "Road trip",
-      "author": "Clarke",
-      "favorite": false,
-      "img": "" 
+      "title": "rest",
+      "description": "test dest",
+      "destination": "test",
+      "date": "2022-03-12",
+      "creator": "",
+      "id": 5
     }
   ]
 }
