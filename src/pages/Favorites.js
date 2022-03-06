@@ -1,14 +1,16 @@
 import React from 'react'
-import AdventureList from '../components/Adventure';
+import AdventureList from '../components/adventures/Adventure';
 
-const Favorites = (props) => {
+const Favorites = ({ adventures }) => {
 
-    const adventures = props.adventures;
-    const title = props.title;
+    console.log(adventures);
+
+    // const adventures = props.adventures;
+    // const title = props.title;
     return (
         <section id="favorites">
         <h1>Favorites Page</h1>
-            {/* <AdventureList adventures={adventures.filter((adventure) => adventure.favorite === true)} /> */}
+         {/* <AdventureList adventures={adventures.filter((adventure) => adventure.favorite === true)} title="My Favorite Adventures"/> */}
         </section>
     )
 }

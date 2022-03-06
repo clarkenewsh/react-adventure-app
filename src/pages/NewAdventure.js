@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateAdventureForm from '../components/CreateAdventureForm'
+import CreateAdventureForm from '../components/adventures/CreateAdventureForm'
 
 const NewAdventure = () => {
     return (
