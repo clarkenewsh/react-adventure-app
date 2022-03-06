@@ -2,7 +2,7 @@ import { BsStar } from "react-icons/bs";
 import { useState } from "react";
 import cssClass from './Adventure.module.css';
 
-const Adventure = ({ adventure }) => {
+const Adventure = ({ adventure, deleteHandler }) => {
 
 
     // Set state to toggle adventure description
@@ -13,14 +13,15 @@ const Adventure = ({ adventure }) => {
             <img src={ adventure.img } alt={adventure.title}/>
             <h3>&#128205;{ adventure.title }</h3>
             <p>&#127758;: { adventure.location }</p>
-            {/* Toggle read more button - inline function to show opsite of what read more is set to*/}
-            <button onClick={() => setReadMore(!readMore)}>See itinerary</button>
-             {/* if readMore = true show description */}
+            {/* Toggle read more button - inline annomymous function to show opsite of what read more is set to*/}
+            <button onClick={() => setReadMore(!readMore)}>View more</button>
+            {/* if readMore = true show description */}
             {readMore && <p>{ adventure.description }</p>}
             <p>&#128197;: { adventure.date }</p>
-            <p>Creator: {adventure.author}</p>
-            
-           <BsStar />
+            <p>Creator: {adventure.creator}</p>
+            <BsStar />
+            <button onClick={() => deleteHandler(adventure.id)}>Delete</button>
+
         </div>
     )
 }
