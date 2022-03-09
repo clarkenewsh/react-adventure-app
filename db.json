@@ -32,14 +32,6 @@
       "creator": "Clarke",
       "favorite": false,
       "img": "https://media.timeout.com/images/105590957/image.jpg"
-    },
-    {
-      "title": "rest",
-      "description": "test dest",
-      "destination": "test",
-      "date": "2022-03-12",
-      "creator": "",
-      "id": 5
     }
   ]
 }

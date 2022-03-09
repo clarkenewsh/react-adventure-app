@@ -11,12 +11,32 @@ const Home = () => {
 
     // Delete adventure 
     const deleteHandler = async (id) => {
-      await fetch(`http://localhost:8000/adventures/${id}`, {
-        method: 'DELETE'
-      })
-      const newAdventures = adventures.filter((adventure) => adventure.id !== id);
-      setAdventures(newAdventures);
+      try {
+        const response = await fetch(`http://localhost:8000/adventures/${id}`, {
+          method: 'DELETE'
+        })
+
+        if(response.status !== 200) {
+          console.log("error");
+          // Throw error is server response is not ok
+          throw new Error ('Could not delete data adventure');
+        }
+        const newAdventures = adventures.filter((adventure) => adventure.id !== id);
+        setAdventures(newAdventures);
+        setError(null)
+
+      } catch (error) {
+        console.log(error)
+        setError(error.message);
+        console.log(isError)
+      }
+
     }
+
+    // use effect hook to load adventure data response data on page load - using [] dependency to update on load
+    useEffect(() => {
+    dataHandler();
+  }, []);
 
     // Fetch adventure data
     const dataHandler = async () => {
@@ -39,16 +59,14 @@ const Home = () => {
         console.log(adventures);
 
       } catch (error) {
-        // catch errors that occur in the try - throw error message generated from the throw new Error
-        setError(true);
+        // catch errors that occur in the try - throw error message generated from the throw new Error & display to user 
+        setIsLoading(false);
+        setError(error.message);
         console.log(isError);
       }
     }
 
-     // use effect hook to load adventure data response data on page load - using [] dependency to update on load
-    useEffect(() => {
-      dataHandler();
-    }, []);
+
       
       // // Fetch api to get adventures data - async callback function - could also use async await method
       // useEffect(() => {

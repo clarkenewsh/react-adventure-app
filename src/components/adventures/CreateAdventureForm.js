@@ -32,6 +32,12 @@ const CreateAdventureForm = ({ }) => {
       }).then(() => {
         console.log("new blog added")
       })
+
+      // Clear form input vales
+
+      // Redirect to home
+
+      // Show alert banner
     }
 
   return (
