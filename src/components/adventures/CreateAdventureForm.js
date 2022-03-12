@@ -10,8 +10,7 @@ const CreateAdventureForm = () => {
     const [destination, setAdventureDestination] = useState('');
     const [date, setAdventureDate] = useState('');
     const [creator, setAdventureCreator] = useState('');
-    const [successAlert, setSuccessAlert] = useState('');
-    const [errorAlert, setErrorAlert] = useState('');
+    const [submitAlert, setSubmitAlert] = useState('');
 
 
     // // solution to using fetch API
@@ -61,24 +60,23 @@ const CreateAdventureForm = () => {
         let responseJson = await response.json();
         console.log(responseJson);
 
-        if(response.status === 201){
-          console.log('test');
+        if(response.status === 201 || 200){
           setAdventureTitle('');
           setAdventureDescription('');
           setAdventureDestination('');
           setAdventureDate('');
           setAdventureCreator('');
-          setSuccessAlert('Successfully added adventure');
+          setSubmitAlert('Successfully added adventure');
           // setTimeout(() => {
           //   history.push("/")
           // }, 2000)
         } else {
-          setErrorAlert('Could not add adventure');
+          setSubmitAlert('Could not add adventure');
         }
 
       } catch (error) {
         console.log(error);
-        setErrorAlert(error)
+        setSubmitAlert(error)
       }
 
     }
@@ -128,8 +126,7 @@ const CreateAdventureForm = () => {
             </select>
             <button>Submit</button>
         </form>
-        { successAlert && <h3>{successAlert}</h3>}
-        { errorAlert && <h3>{errorAlert}</h3>}
+        { submitAlert && <h3>{submitAlert}</h3>}
     </div>
   )
 
