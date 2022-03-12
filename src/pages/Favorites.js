@@ -1,5 +1,5 @@
 import React from 'react'
-import AdventureList from '../components/adventures/Adventure';
+// import AdventureList from '../components/adventures/Adventure';
 
 const Favorites = ({ adventures }) => {
 

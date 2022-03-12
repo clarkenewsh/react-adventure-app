@@ -19,7 +19,7 @@ const Home = () => {
         if(response.status !== 200) {
           console.log("error");
           // Throw error is server response is not ok
-          throw new Error ('Could not delete data adventure');
+          throw new Error ('Could not delete adventure');
         }
         const newAdventures = adventures.filter((adventure) => adventure.id !== id);
         setAdventures(newAdventures);

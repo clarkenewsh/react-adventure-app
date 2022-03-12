@@ -23,15 +23,12 @@
       "img": "https://lp-cms-production.imgix.net/2019-06/GettyImages-494314513_high.jpg?sharp=10&vib=20&w=1200&auto=compress&fit=crop&fm=auto&h=800"
     },
     {
-      "id": 3,
-      "title": "Skye",
-      "description": "Adventure description",
-      "location": "Scotland",
-      "date": "Summer 2022",
-      "category": "Road trip",
-      "creator": "Clarke",
-      "favorite": false,
-      "img": "https://media.timeout.com/images/105590957/image.jpg"
+      "title": "test 1",
+      "description": "test 1",
+      "destination": "test 1",
+      "date": "2022-03-24",
+      "creator": "Ruth",
+      "id": 4
     }
   ]
 }

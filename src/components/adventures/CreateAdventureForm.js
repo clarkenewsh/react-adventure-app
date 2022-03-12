@@ -1,43 +1,86 @@
 import React from 'react';
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import cssClass from './CreateAdventureForm.module.css';
 
-const CreateAdventureForm = ({ }) => {
-
+const CreateAdventureForm = () => {
+  
     const [title, setAdventureTitle] = useState('');
     const [description, setAdventureDescription] = useState('');
     const [destination, setAdventureDestination] = useState('');
     const [date, setAdventureDate] = useState('');
     const [creator, setAdventureCreator] = useState('');
+    const [successAlert, setSuccessAlert] = useState('');
+    const [errorAlert, setErrorAlert] = useState('');
 
-    const handleSubmit = (e) => {
-      // prevent deafault action - page refresh on submit
+
+    // // solution to using fetch API
+    // const handleSubmit = (e) => {
+    //   // prevent deafault action - page refresh on submit
+    //   e.preventDefault();
+    //   // create a new adventure object 
+    //   const adventure = {
+    //     title,
+    //     description, 
+    //     destination,
+    //     date,
+    //     creator
+    //   };
+    //   // Testing new adventure object was created
+    //   console.log(adventure);
+
+    //   // POST 
+    //   fetch('http://localhost:8000/adventures', {
+    //     method: 'POST',
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(adventure)
+    //   }).then(() => {
+    //     console.log("new blog added")
+    //   })
+    // }
+
+    const handleSubmit = async (e) => {
       e.preventDefault();
-      // create a new adventure object 
-      const adventure = {
-        title,
-        description, 
-        destination,
-        date,
-        creator
-      };
-      // Testing new adventure object was created
-      console.log(adventure);
+      
+      try {
+        let response = await fetch('http://localhost:8000/adventures', {
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: title,
+            description: description,
+            destination: destination,
+            date: date,
+            creator: creator,
+          }),
+        });
 
-      // POST 
-      fetch('http://localhost:8000/adventures', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(adventure)
-      }).then(() => {
-        console.log("new blog added")
-      })
+        // test post response
+        console.log(response);
 
-      // Clear form input vales
+        let responseJson = await response.json();
+        console.log(responseJson);
 
-      // Redirect to home
+        if(response.status === 201){
+          console.log('test');
+          setAdventureTitle('');
+          setAdventureDescription('');
+          setAdventureDestination('');
+          setAdventureDate('');
+          setAdventureCreator('');
+          setSuccessAlert('Successfully added adventure');
+          // setTimeout(() => {
+          //   history.push("/")
+          // }, 2000)
+        } else {
+          setErrorAlert('Could not add adventure');
+        }
 
-      // Show alert banner
+      } catch (error) {
+        console.log(error);
+        setErrorAlert(error)
+      }
+
     }
 
   return (
@@ -85,6 +128,8 @@ const CreateAdventureForm = ({ }) => {
             </select>
             <button>Submit</button>
         </form>
+        { successAlert && <h3>{successAlert}</h3>}
+        { errorAlert && <h3>{errorAlert}</h3>}
     </div>
   )
 
